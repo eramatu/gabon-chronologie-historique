@@ -1,0 +1,21 @@
+version: '3'
+services:
+  php-fpm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USERNAME: erasmatu
+        UID: 503
+        EMAIL: david-geofret.ndjabengue-doumbeneny@etu.univ-orleans.fr
+        NAME: "david-geofret.ndjabengue-doumbeneny"
+    container_name: framework_web_projet_gabon
+    volumes:
+      - ./dev:/var/www/html
+    ports:
+      - "8000:8000"
+      - "8010:8010"
+      - "8020:8020"
+    environment:
+      PHP_IDE_CONFIG: serverName=framework_web_projet_gabon
+      PS1: "[ $$(whoami) | $$(pwd) ] "
