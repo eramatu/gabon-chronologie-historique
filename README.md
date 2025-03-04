@@ -30,3 +30,18 @@ périodes précoloniale, coloniale, l'indépendance et l'ère contemporaine.
 ````npm install bootstrap-icons````
 
 ````npm run dev````
+
+### Activation base de données
+````symfony console doctrine:database:create````
+
+### Création de l'entité "Evenement"
+````symfony console make:entity````
+
+````symfony console make:migration````
+
+````symfony console doctrine:migrations:migrate````
+
+### Implémentation de fixtures
+````symfony console make:fixture````
+
+````symfony console doctrine:fixtures:load````
